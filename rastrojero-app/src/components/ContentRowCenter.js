@@ -1,11 +1,11 @@
 import React from 'react';
-import LastUser from './LastUser'
+import LastProduct from './LastProduct'
 import ProductsList from './ProductsList'
 function ContentRowCenter() {
     return (
         <React.Fragment>
             <div className="row">
-                <LastUser />
+                <LastProduct />
                 <ProductsList />
             </div>
         </React.Fragment>

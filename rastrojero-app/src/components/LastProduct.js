@@ -2,30 +2,32 @@ import React, { useEffect, useState } from 'react';
 
 function LastUser() {
 	let [lastUser, setUser] = useState([])
+	let [lastProduct, setProduct] = useState([])
 	let [info, setInfo] = useState([])
 
 	useEffect(() => {
 		/* setCards(cards = initial) */
 		let counts = []
-		fetch('http://localhost:5000/api/users')
+		fetch('http://localhost:5000/api/products')
 			.then(values => {
 				return values.json()
 			})
-			.then(users => {
-				let last = users.count
-				fetch(`http://localhost:5000/api/users/${last}`)
+			.then(products => {
+				let last = products.count
+				fetch(`http://localhost:5000/api/products/${last}`)
 					.then(values => {
 						return values.json()
 					})
 					.then(data => {
-						setUser(lastUser = data)
+						setProduct(lastProduct = data)
+						console.log()
 						setInfo(info =
 							<div className="lastUser" >
-								<h3>Last User</h3>
-								<h5>Nombre/s: </h5><p>{lastUser.first_name}</p>
-								<h5>Apellido/s: </h5><p>{lastUser.last_name}</p>
-								<h5>email: </h5><p>{lastUser.email}</p>
-								<h5>Imagen: </h5><img src={lastUser.imageURL} />
+								<h3>Último producto en base de datos</h3>
+								<h5>Nombre </h5><p>{lastProduct.name}</p>
+								<h5>Descripción: </h5><p>{lastProduct.description}</p>
+								<h5>Precio: </h5><p>{lastProduct.price}</p>
+								<h5>Imagen: </h5><img src={lastProduct.imageURL} />
 							</div>)
 					})
 			})
