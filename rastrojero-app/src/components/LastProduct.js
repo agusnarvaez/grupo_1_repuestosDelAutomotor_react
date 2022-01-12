@@ -20,9 +20,9 @@ function LastUser() {
 					})
 					.then(data => {
 						setProduct(lastProduct = data)
-						console.log()
 						setInfo(info =
-							<div className="lastUser" >
+							<div className="lastProduct" >
+								
 								<h3>Último producto en base de datos</h3>
 								<h5>Nombre </h5><p>{lastProduct.name}</p>
 								<h5>Descripción: </h5><p>{lastProduct.description}</p>

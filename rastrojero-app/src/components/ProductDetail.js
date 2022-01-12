@@ -1,7 +1,7 @@
 import React from 'react';
 
 function ProductDetail(props) {
-    console.log(props)
+
     return (
         <tr>
             <td>{props.id}</td>

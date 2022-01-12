@@ -45,6 +45,12 @@ function SideBar() {
                         <span>Último producto</span></Link>
                 </li>
 
+                <li className="navItem">
+                    <Link to='/categories' className="navLink"  >
+                        <i className="fas fa-fw fa-chart-area"></i>
+                        <span>Categorías</span></Link>
+                </li>
+
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="navItem">
                     <Link to='/products' className="navLink"  >

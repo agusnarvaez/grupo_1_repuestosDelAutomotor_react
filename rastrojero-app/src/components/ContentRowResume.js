@@ -34,8 +34,9 @@ function ContentRowTop() {
                     return values.json()
                 })
                 .then(data => {
-                    counts[1] = data.count
+                    /* counts[1] = data.count */
                     setCards(cards[1].amount = data.count)
+                    setCards(cards[2].amount = data.countByCategory.length)
                 })
                 .catch(e => console.log(e)))
         ])
@@ -52,7 +53,7 @@ function ContentRowTop() {
     return (
         <React.Fragment>
             {/*<!-- Content Row -->*/}
-            < div className="row" >
+            < div className="row contentRowResume" >
                 {info}
             </div >
         </React.Fragment >

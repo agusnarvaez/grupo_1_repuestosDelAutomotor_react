@@ -5,15 +5,19 @@
   padding: 0;
   font-size: 12px;
 }
+#root {
+  height: 100%;
+}
+
 .wrapper {
-  height: 100vh;
-  width: 100%;
+  height: fit-content;
+  width: 100vw;
   display: flex;
 }
 
 .sideBar {
-  width: 30vw;
-  height: 100%;
+  width: 20vw;
+
   background-color: rgba(102, 95, 95, 0.678);
   padding-left: 0;
   margin: 0;
@@ -46,42 +50,75 @@
   max-width: 100px;
   margin: auto;
 }
-
+#content {
+  width: 80vw;
+}
 .topBar {
   background-color: #ffc107;
-  width: 70vw;
+  width: 100%;
   height: 5vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-/*Last User*/
-.lastUser {
+.contentRowCenter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contentRowResume {
+  max-height: 10vh;
+}
+/*Last Product*/
+.lastProduct {
   margin: 2%;
   padding: 1%;
-  max-width: 500px;
+  width: 45%;
+  max-height: 50vh;
   display: flex;
   box-shadow: 5px 5px 10px gray;
   flex-wrap: wrap;
   align-items: center;
 }
-.lastUser h3 {
+.lastProduct h3 {
   text-align: center;
   width: 100%;
 }
-.lastUser h5 {
+.lastProduct h5 {
   display: block;
   width: 50%;
 }
-.lastUser p {
+.lastProduct p {
   display: block;
   width: 50%;
 }
-.lastUser img {
+.lastProduct img {
   max-width: 150px;
 }
-
+/***Categories***/
+.categories {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: space-around;
+  align-items: center;
+  margin: 1%;
+}
+.categories h2 {
+  width: 100%;
+  text-align: center;
+}
+.category {
+  width: 45%;
+  height: 25%;
+  box-shadow: 2px 2px 5px gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1%;
+}
 /*Footer*/
 .mainFooter {
   background-color: #8a817c;
@@ -104,4 +141,10 @@
 .copyright p {
   margin: 0;
   color: white;
+}
+
+@media (min-width: 768px) {
+  .categories {
+    width: 45%;
+  }
 }
